@@ -1,14 +1,34 @@
-# khmer_date
+# Khmer Date
 
-A new Flutter package project.
+គឺជា Plugin ដែលបង្កើតសម្រាប់ប្ដូរកាលបរិច្ឆេទទៅជាទម្រង់ខ្មែរ និង លេខជាភាសាខ្មែរ
 
-## Getting Started
+Khmer Date is plugin help you to convert date time and number to Khmer date time format and number to Khmer number
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+## ចំណាំ Note
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+ទម្រង់កាលបរិច្ឆេទ ឧទាហរណ៍ៈ "2021-06-29T15:16:43" ទាញចេញពី API
+
+## របៀបប្រើប្រាស់ Usage
+~~~dart
+void main() {
+    String _date = "2021-06-29T15:16:43";
+    print(KhmerDate.date(_date,format: "dd-mm-yy"));
+    // result: ២៩-០៦-២១
+    print(KhmerDate.date(_date,format: "ddd/mmm/yyyy"));
+    // result: អង្គ/មិថុនា/២០២១
+    print(KhmerDate.date(_date,format: "ថ្ងៃdddd"));
+    // result: ថ្ងៃអង្គារ៍
+    print(KhmerDate.date(_date,format: "ថ្ងៃdddd ទីdd ខែmmm ឆ្នាំyyyy ម៉ោង hr"));
+    // result: ថ្ងៃអង្គារ៍ ទី២៩ ខែមិថុនា ឆ្នាំ២០២១ ម៉ោង ០៣:១៦ ល្ងាច
+    print(KhmerDate.date(_date,format: "ម៉ោង Hr"));
+    // result: ម៉ោង ១៥:១៦
+    print(KhmerDate.khmerNumber("1234567890 Work..."));
+    // result: ១២៣៤៥៦៧៨៩០ Work...
+}
+~~~
+
+## អ្នកបង្កើត
+លោក ហ៊ិន រដ្ឋា
+ជំនាញ បង្កើតកម្មវិធីទូរស័ព្ទ
+បទពិសោធន៍ Flutter, ReactNative
+ទូរស័ព្ទ 096 659 2250
