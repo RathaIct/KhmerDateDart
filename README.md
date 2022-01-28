@@ -36,11 +36,11 @@ void main() {
 ~~~
 
 ## អ្នកបង្កើត
-<img src="https://github.com/RathaIct/KhmerDateDart/blob/main/ratha.jpeg" width="200" />
+<img src="https://raw.githubusercontent.com/RathaIct/KhmerDateDart/main/ratha.jpeg" width="150" />
 លោក ហ៊ិន រដ្ឋា
 ជំនាញ បង្កើតកម្មវិធីទូរស័ព្ទ
 បទពិសោធន៍ Flutter, ReactNative
 ទូរស័ព្ទ 096 659 2250 <a href="tel:0966592250">📞</a>
 
-### Website
+### គេហទំព័រ
 <a href="https://rathadev.website"  target="_blank">Ratha Dev</a>
