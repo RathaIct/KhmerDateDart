@@ -6,7 +6,15 @@ Khmer Date is plugin help you to convert date time and number to Khmer date time
 
 ## ចំណាំ Note
 
-ទម្រង់កាលបរិច្ឆេទ ឧទាហរណ៍ៈ "2021-06-29T15:16:43" ទាញចេញពី API
+ទម្រង់កាលបរិច្ឆេទ ឧទាហរណ៍ៈ "2021-06-29T15:16:43" ទាញចេញពី API 
+ប្រសិនបើ កាលបរិច្ឆេទទម្រង់ផ្សេង សូមប្តូរ apiFormat តាមទម្រង់របស់លោកអ្នក
+apiFormat: សម្រាប់កំណត់លើទម្រង់កាលបរិច្ឆេទពី API ដែលខុសពីទម្រង់កាលបរិច្ឆេទខាងលើ "yyyy-MM-ddThh:mm:ss" លោកអ្នកត្រូវប្ដូរតាមទម្រង់កាលរិច្ឆេទលោកអ្នកវិញ ឧៈ "2021/06/29 13:15:36" ដូចនេះ apiFormat: "yyyy/MM/dd hh:mm:ss" កាលបរិច្ឆេទខុសទម្រង់ វានឹងធ្វើឲ្យតម្លៃ ពេលវេលាចេញលទ្ធផលខុស
+
+ក្នុង plugin នេះមានប្រើ plugin ជំនួសគឺ intl: ^0.17.0 បើលោកអ្នកបានដំឡើង plugin នេះរួចហើយ
+សូមធ្វើឲ្យប្រាដកថា plugin intl លោកអ្នកនៅក្នុង version ដូចគ្នា ឬ លោកអាចលុប intl plugin នៅក្នុង pubspec.yaml របស់លោកអ្នក
+ដើម្បីជៀសវាងការជាន់គ្នា
+
+លោកអ្នកក៏អាចប្រើ version ចាស់បានដែរ(khmer_date: ^0.0.3) តែ version នេះគ្មាន apiFormat សម្រាប់លោកអ្នកប្ដូរកាលបរិច្ឆេទទម្រង់ផ្សេងទេ
 
 ## របៀបប្រើប្រាស់ Usage
 ~~~dart
@@ -28,7 +36,10 @@ void main() {
 ~~~
 
 ## អ្នកបង្កើត
+<img src="https://github.com/RathaIct/KhmerDateDart/blob/main/ratha.jpeg" width="200" />
 លោក ហ៊ិន រដ្ឋា
 ជំនាញ បង្កើតកម្មវិធីទូរស័ព្ទ
 បទពិសោធន៍ Flutter, ReactNative
-ទូរស័ព្ទ 096 659 2250
+ទូរស័ព្ទ 096 659 2250 <a href="tel:0966592250">📞</a>
+### Website
+<a href="https://rathadev.website"  target="_blank">Ratha Dev</a>

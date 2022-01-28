@@ -1,6 +1,18 @@
 library khmer_date;
-
+import 'package:intl/intl.dart';
 /// អ្នកបង្កើត លោក ហ៊ិន រដ្ឋា ទូរស័ព្ទ 096 659 2250
+/// បង្កើតកម្មវិធីទូរស័ព្ទ បទពិសោធន៍ Flutter, ReactNative
+/// 
+/// ទម្រង់កាលបរិច្ឆេទ ឧៈ "2021-06-29T13:15:36" បើខុសពីទម្រង់នេះសូមប្ដូរ apiFormat
+///
+///apiFormat: សម្រាប់កំណត់លើទម្រង់កាលបរិច្ឆេទពី API ដែលខុសពីទម្រង់កាលបរិច្ឆេទខាងលើ "yyyy-MM-ddThh:mm:ss" លោកអ្នកត្រូវប្ដូរតាមទម្រង់កាលរិច្ឆេទលោកអ្នកវិញ ឧៈ "2021/06/29 13:15:36"
+///
+///ដូចនេះ apiFormat: "yyyy/MM/dd hh:mm:ss" កាលបរិច្ឆេទខុសទម្រង់ វានឹងធ្វើឲ្យតម្លៃ ពេលវេលាចេញលទ្ធផលខុស
+///
+/// format: "ថ្ងៃdddd ទីdd ខែmmm ឆ្នាំyyyy ម៉ោង hr" លទ្ធផល (ថ្ងៃអង្គារ៍ ទី២៩ ខែមិថុនា ឆ្នាំ២០២១ ម៉ោង ០១:១៥ ល្ងាច)
+///
+/// format: "hr" 12 hour, "Hr" 24 hour
+/// 
 class KhmerDate {
   /// ទម្រង់កាលបរិច្ឆេទ ឧៈ "2021-06-29T13:15:36"
   /// ប្រសិនបើកាលបរិច្ឆេទថ្ងៃនេះនឹង return trun ក្រៅពីនេះនឹង return false
@@ -10,14 +22,25 @@ class KhmerDate {
     return today == 0;
   }
 
-  /// ទម្រង់កាលបរិច្ឆេទ ឧៈ "2021-06-29T13:15:36"
+  /// ទម្រង់កាលបរិច្ឆេទ ឧៈ "2021-06-29T13:15:36" បើខុសពីទម្រង់នេះសូមប្ដូរ apiFormat
+  ///
+  ///apiFormat: សម្រាប់កំណត់លើទម្រង់កាលបរិច្ឆេទពី API ដែលខុសពីទម្រង់កាលបរិច្ឆេទខាងលើ "yyyy-MM-ddThh:mm:ss" លោកអ្នកត្រូវប្ដូរតាមទម្រង់កាលរិច្ឆេទលោកអ្នកវិញ ឧៈ "2021/06/29 13:15:36"
+  ///
+  ///ដូចនេះ apiFormat: "yyyy/MM/dd hh:mm:ss" កាលបរិច្ឆេទខុសទម្រង់ វានឹងធ្វើឲ្យតម្លៃ ពេលវេលាចេញលទ្ធផលខុស
+  ///
   /// format: "ថ្ងៃdddd ទីdd ខែmmm ឆ្នាំyyyy ម៉ោង hr" លទ្ធផល (ថ្ងៃអង្គារ៍ ទី២៩ ខែមិថុនា ឆ្នាំ២០២១ ម៉ោង ០១:១៥ ល្ងាច)
+  ///
   /// format: "hr" 12 hour, "Hr" 24 hour
   static String date(
     String date, {
     String format = "dd-mm-yyyy",
+    String? apiFormat,
   }) {
-    final DateTime _date = DateTime.parse(date);
+    DateTime _date = DateTime.parse(date);
+    if (apiFormat != null) {
+      final f = DateFormat(apiFormat);
+      _date = f.parse(date);
+    }
     if (format.contains("dddd")) {
       format = format.replaceAll("dddd", _convertKhmerWeekDay(_date));
     }
