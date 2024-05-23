@@ -1,6 +1,6 @@
 name: khmer_date
 description: Khmer Date is plugin help you to convert date time and number to Khmer
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/RathaIct/KhmerDateDart
 repository: https://github.com/RathaIct/KhmerDateDart
 issue_tracker: https://github.com/RathaIct/KhmerDateDart/issues
