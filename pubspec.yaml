@@ -6,7 +6,7 @@ repository: https://github.com/RathaIct/KhmerDateDart
 issue_tracker: https://github.com/RathaIct/KhmerDateDart/issues
 maintainer: Hin Ratha (@RathaIct)
 screenshots:
-  - description: "Thumbnail"
+  - description: "Khmer date convertor"
     path: thumbnail.png
 environment:
   sdk: ">=3.0.0 <4.0.0"
