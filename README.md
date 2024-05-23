@@ -83,6 +83,17 @@ apiFormat: សម្រាប់កំណត់លើទម្រង់កាល
 
 ## របៀបប្រើប្រាស់ Usage
 
+- `KhmerDate.isToday("2024-05-23T09:27:05")` check current date with param date from API and result true if current date equal date from API
+  - `apiFormat` format date as your API date.
+- `KhmerDate.today()` return current date from your device to Khmer Date option:
+  - `format` default `dd-MM-yyyy` return date format
+- `KhmerDate.date("2024-05-23T09:27:05")` convert date to Khmer date option:
+  - `format` default `dd-MM-yyyy` return date format
+  - `apiFormat` format date as your API date.
+- `KhmerDate.khmerNumber("1234567890 Work...")` convert number to Khmer number.
+
+### Example code
+
 ```dart
 void main() {
   String _date = "2024-05-23 09:27:05";
