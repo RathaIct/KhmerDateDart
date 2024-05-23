@@ -7,7 +7,7 @@ void main() {
   print(KhmerDate.today(format: "dddd-MMMM-yyyy"));
   // result: ព្រហស្បតិ៍-ឧសភា-២០២៤ (current date)
   print(KhmerDate.date(_date,
-      format: "dd-MM-yy", apiFormat: "yyyy-MM-dd hh:MM:ss"));
+      format: "dd-MM-yy", apiFormat: "yyyy-MM-dd hh:mm:ss"));
   // result: ២៣-០៣-២៦
   print(KhmerDate.date(_date, format: "ddd/MMM/yyyy"));
   // result: ព្រហ/ឧសភា/២០២៤
